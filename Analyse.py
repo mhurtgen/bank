@@ -14,10 +14,10 @@ def connsql():
     conn = sqlite3.connect('Transactions2')   
     
    # cur=conn.cursor()
-    query='''SELECT substr(date_transaction,0,8),category_id, SUM(amount)
+    query='''SELECT substr(date_transaction,0,8), SUM(amount)
 FROM transactions
-WHERE category_id=4 OR category_id=6 OR category_id=7
-GROUP BY substr(date_transaction,0,8),category_id'''
+WHERE category_id=2 OR category_id=4 OR category_id=6 OR category_id=7 OR category_id=8
+GROUP BY substr(date_transaction,0,8)'''
     
     cursor = conn.execute(query)
     

@@ -39,7 +39,7 @@ def descriptionCategory(description):
     #Logement
     if ('BE19 3400 4130' in description)|('crédit habitation' in description):
         output=1
-    elif ('Electrabel' in description)|('MEGA'  in description):
+    elif ('Electrabel' in description)|('MEGA'  in description)|('Eneco' in description):
         output=2
     elif ('CPAS' in description):
         output=3
