@@ -163,13 +163,16 @@ def getNTransactions(page,filename):
         #',' in s 
         and (('+' in s) or ('-' in s)) 
         and ('*' not in s)
+        and (':' not in s)
+        and ('EUR' not in s)
         and spre !='précédent' 
         and spre !='actuel'
-        and spre!='incluse'): 
+        and spre!='incluse)'): 
         #(s.endswith('+') or s.endswith('-') or s.endswith('.')):
             #print(s)
             
-           # print(content[i-2])
+            #print(content[i-2])
+            #print(s)
            # print('ok')
             n=n+1
     print (n)   
